@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:id="@+id/signUpLayout"
+    tools:context=".login.SignUpActivity">
+
+    <TextView
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng ký"
+        android:textColor="@color/teal_700"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/backToSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_toEndOf="@+id/signUp"
+        android:text="Quay lại "
+        android:textColor="#f08080"
+        android:textIsSelectable="true"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/signUpName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signUp"
+        android:layout_marginTop="40dp"
+        android:textIsSelectable="true"
+        android:hint="Họ và tên"
+        android:inputType="text"
+        android:textSize="25sp"
+        tools:ignore="HardcodedText"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/signUpDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signUpName"
+        android:layout_marginTop="15dp"
+        android:hint="Ngày/tháng/năm sinh"
+        android:inputType="date"
+        android:textSize="25sp"
+        tools:ignore="Autofill,HardcodedText" />
+    <EditText
+        android:id="@+id/signUpPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signUpDate"
+        android:layout_marginTop="15dp"
+        android:hint="Số điện thoại"
+        android:textSize="25sp"
+        android:inputType="phone"
+        tools:ignore="Autofill,HardcodedText" />
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signUpPhone"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="4dp"
+            android:text="Giới tính"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/gender1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nam"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText" />
+        <RadioButton
+            android:id="@+id/gender2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nữ"
+            android:textSize="25sp"
+            android:layout_marginStart="40dp"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/signUpHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout1"
+        android:hint="Chiều cao(cm)"
+        android:inputType="number"
+        tools:ignore="Autofill,HardcodedText" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/signUpHeight"
+        android:hint="Cân nặng(kg)"
+        android:inputType="number"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signUpHeight"
+        android:layout_marginTop="25dp"
+        android:text="Thông tin đăng nhập"
+        android:textColor="@color/teal_700"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/signUpEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="15dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textSize="25sp"
+        tools:ignore="Autofill,HardcodedText" />
+    <EditText
+        android:id="@+id/signUpPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signUpEmail"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:textSize="25sp"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <EditText
+        android:id="@+id/signUpConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signUpPassword"
+        android:layout_marginTop="15dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:textSize="25sp"
+        tools:ignore="Autofill,HardcodedText" />
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signUpConfirm"
+        android:layout_marginTop="10dp"
+        android:text="Đăng ký"
+        tools:ignore="HardcodedText"
+        android:background="@drawable/round_border"/>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
